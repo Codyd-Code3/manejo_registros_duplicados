@@ -1,8 +1,8 @@
 import pandas as pd
 
 # Lee los dos archivos de Excel y los convierte en DataFrames
-df1 = pd.read_excel('db_semana_3.xlsx')
-df2 = pd.read_excel('db_semana_4.xlsx')
+df1 = pd.read_excel('archivos_excel/db_semana_3.xlsx')
+df2 = pd.read_excel('archivos_excel/db_semana_4.xlsx')
 
 # Combina los dos DataFrames en uno solo
 df_all = pd.concat([df1, df2])
