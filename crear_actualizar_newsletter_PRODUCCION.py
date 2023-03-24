@@ -1,4 +1,6 @@
 """
+    BASE DE DATOS PRODUCCION!
+
     contexto: El script apartir de un archivo en excel crea un contacto si no existe en odoo con la etiqueta 'Newsletter'
     si ya existe entonces verifica si tiene la etiqueta 'Newsletter' y si no la tiene entonces se la añade.
 
@@ -10,16 +12,18 @@ import openpyxl
 import pandas as pd
 
 # Conectarse a la instancia de Odoo
-url = 'https://calzadotriunfo-pruebas-produccion-7475553.dev.odoo.com'
-db = 'calzadotriunfo-pruebas-produccion-7475553'
-username = 'admin'
-password = 'admin'
+url = ''
+db = ''
+username = ''
+password = ''
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
 uid = common.authenticate(db, username, password, {})
 models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
+print("conexion: ", uid)
+
 # Leer el archivo de Excel y almacenar los correos electrónicos en una lista
-df1 = pd.read_excel('archivos_excel/calzado_triunfo/22_03_2023/newsletter-subscribers.xlsx')
+df1 = pd.read_excel('archivos_excel/calzado_triunfo/23-03-2023/Base_de_datos_en_Produccion/db_codyd.xlsx')
 
 #df1 = df1.rename(columns={"Email": "email", "Name": "name"})
 

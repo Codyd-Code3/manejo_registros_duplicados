@@ -3,10 +3,10 @@ import openpyxl
 import pandas as pd
 
 # Conectarse a la instancia de Odoo
-url = 'https://calzadotriunfo-pruebas-produccion-7475553.dev.odoo.com'
-db = 'calzadotriunfo-pruebas-produccion-7475553'
-username = 'admin'
-password = 'admin'
+url = ''
+db = ''
+username = ''
+password = ''
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
 uid = common.authenticate(db, username, password, {})
 models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
